@@ -1,4 +1,4 @@
-# BGChecksProcessing
+# Background Checks Processing
 
 A Python script for processing background check data.
 
