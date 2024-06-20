@@ -81,7 +81,7 @@ def process_row(row: pd.Series) -> dict:
 
 if __name__ == "__main__":
     # Read the CSV file
-    file_path = r'/Users/c.casteel/Downloads/BGChecks210 Sample2 (1).csv'
+    file_path = r'import.csv'
     logger.info(f"Reading CSV file from {file_path}")
     df = pd.read_csv(file_path)
     logger.info(f"Read {len(df)} rows from {file_path}")
@@ -96,7 +96,7 @@ if __name__ == "__main__":
     concatenated_data = export_df.apply(lambda row: ''.join(map(str, row)), axis=1)
         
     # Write to file
-    output_file = r'BG_Checks_Sample_Export_2.txt'
+    output_file = r'export.txt'
     logger.info(f"Writing processed data to {output_file}")
     with open(output_file, 'w') as f:
         f.write('\n'.join(concatenated_data))
